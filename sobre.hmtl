@@ -1,7 +1,12 @@
-from flask import Flask, redirect, render_template
-
-@app.get("/sobre") 
-
-def sobre(): 
-
-   return render_template("sobre.html")
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <title>Sobre - Flask</title>
+  </head>
+  <body>
+    <h1>Página Sobre</h1>
+    <p>Esta é uma página super simples para testar o Flask.</p>
+    <a href="/">Voltar</a>
+  </body>
+</html>
