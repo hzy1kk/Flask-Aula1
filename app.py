@@ -1,20 +1,20 @@
-from flask import Flask, redirect
+from flask import Flask, redirect, render_template
 
 app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return 'Olá, mundo!'
+    return render_template('index.html')
 
 @app.route('/sobre')
 def sobre():
-    return "<h1>pagina info</h1>"
+    return render_template('sobre.html')
 
 @app.route('/info')
 def info():
     modulo = "css"
     aula = '7'
-    return f"<h1>Modulo: {modulo}</h1><h1>Aula: {aula}</h1>"
+    return render_template('info.html', modulo=modulo, aula=aula)
 
 @app.route('/bem-vindo')
 def bem_vindo():
