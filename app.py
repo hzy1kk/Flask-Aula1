@@ -14,7 +14,7 @@ def sobre():
 def info():
     modulo = "css"
     aula = '7'
-    return f"<h1>Modulo: {modulo}</h1><h1>Aula: {aula}</h1>"
+    return render_template('info.html', modulo=modulo, aula=aula)
 
 @app.route('/bem-vindo')
 def bem_vindo():
